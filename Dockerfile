@@ -4,5 +4,6 @@ LABEL maintainer "Bagl3y <macri.pascal@gmail.com>"
 USER 0
 ## Install 'nano'
 RUN install_packages nano
+RUN echo "root:toor" | chpasswd
 ENTRYPOINT [ "-c while true; do echo hello; sleep 10;done" ]
 CMD [ "/bin/bash" ]
